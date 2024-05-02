@@ -1,0 +1,147 @@
+$primary: #9D1535;
+$accent: #d08642;
+$bg: #ffff;
+$bg-accent: #e7e8e9;
+$disabled: #9c9c9c;
+$foreground: #000000;
+$text-color: white;
+*{
+    font-family: "Mochiy Pop P One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    font-weight: bold;
+    background: $bg;
+    overflow: hidden;
+    color: $foreground;
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100vh;
+}
+
+.quiz-container{
+   width: 500px; //100%
+   background: $primary;
+   //opacity: 0.3;
+   border-radius: 4px;
+   margin-top: 100px;
+   padding: 30px 60px;
+   box-sizing: content-box;
+// background-color: $primary;
+// background-size: cover;
+// float: left;
+// padding: 14px 16px;
+// text-align: center;
+// text-decoration: none;
+// font-size: 17px;
+// position: fixed;
+// top: 0;
+// left: 0;
+// right: 0;
+// height: 80px;
+
+   .active-question-no{
+    font-size: 32px;
+    font-weight: 500;
+    color: $bg;
+   }
+   .total-question{
+    font-size: 16px;
+    font-weight: 500;
+    color: $bg;
+   }
+   h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    color: $bg;
+   }
+   ul{
+    margin-top: 20px;
+    margin-left: -40px;
+    //option choices buttons styling
+    li{
+        text-decoration: none;
+        list-style: none;
+        color: $bg;
+        font-size: 16px;
+        background: $primary;
+        border: 1px solid $disabled;
+        border-radius:16px ;
+        padding: 11px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .selected-answer{
+        background-color: $text-color;
+        border: 1px solid $accent;
+        color: $primary;
+        .disabled-choice{
+        background: $bg-accent;
+        color: $disabled;
+        cursor: not-allowed;
+    }
+       
+    }
+    
+   }
+   .explanation{
+    text-align: center;
+    color:$primary;
+    p{
+        color:$bg;
+        font-size: 20px;
+        letter-spacing: 1.4px;
+        text-align: center;
+    }
+}
+
+   .footer{
+    display: flex;
+    justify-content: flex-end;
+   }
+   //next button styling
+   button{
+    background: $disabled;
+    border-radius: 9px;
+    font-size: 18px;
+    color:$primary;
+    padding: 10px 42px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+
+    &:disabled{
+        background: $bg-accent;
+        color: $disabled;
+        cursor: not-allowed;
+    }
+
+}
+
+   .result{
+    text-align: center;
+    color:$bg;
+    h3{
+        color:$bg;
+        font-size: 24px;
+        letter-spacing: 1.4px;
+        text-align: center;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 500;
+        span{
+            color:$bg;
+            font-size: 22px;
+        }
+    }
+   }
+
+}
